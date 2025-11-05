@@ -10,7 +10,7 @@ function QuoteGenerator() {
     const fetchQuote = async () => {
       try {
         setLoading(true);
-        const response = await axios.get("http://localhost:3001/api/quote");
+        const response = await axios.get("https://infohub-server.onrender.com/api/quote");
         setQuote(response.data.quote);
       } catch (err) {
         setError("Could not fetch quote.");
