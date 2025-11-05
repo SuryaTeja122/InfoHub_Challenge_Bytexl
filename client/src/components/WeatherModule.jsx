@@ -11,7 +11,7 @@ function WeatherModule() {
       try {
         setLoading(true);
         setError("");
-        const response = await axios.get("http://localhost:3001/api/weather"); // backend endpoint
+        const response = await axios.get("https://infohub-server.onrender.com/api/weather"); // backend endpoint
         setWeather(response.data);
       } catch (err) {
         setError("Could not fetch weather data.");
