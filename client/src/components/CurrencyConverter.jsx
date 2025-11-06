@@ -16,7 +16,7 @@ function CurrencyConverter() {
     try {
       setLoading(true);
       setError("");
-      const response = await axios.get(`https://infohub-server.onrender.com/api/currency?amount=${amount}`);
+      const response = await fetch(`https://infohub-server.onrender.com/api/currency?amount=${amount}`);
       setResult(response.data);
     } catch (err) {
       setError("Could not fetch currency data.");
